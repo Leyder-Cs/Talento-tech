@@ -101,7 +101,7 @@ export function PublicLayout() {
   };
 
   return (
-    <div className="min-h-screen flex flex-col overflow-x-hidden">
+    <div className="min-h-screen flex flex-col">
       <header className={isCatalog
         ? 'sticky top-0 z-40 w-full transition-all duration-300 bg-gray-900 border-b border-gray-800'
         : `${isHome || isAuthPage ? 'fixed' : 'sticky'} top-0 z-40 w-full transition-all duration-300 ${
@@ -323,7 +323,7 @@ export function PublicLayout() {
             {/* ─── Categories dropdown ─── */}
             {isCatalog && (
               <div
-                className={`absolute z-[36] bg-gray-900 border border-white/10 rounded-b-xl shadow-2xl overflow-hidden max-h-[70vh] min-w-[400px] w-[720px] max-w-[calc(100vw-2rem)] origin-top transition-all duration-200 ease-out ${
+                className={`absolute z-[36] bg-gray-900 border border-white/10 rounded-b-xl shadow-2xl overflow-hidden max-h-[70vh] min-w-[280px] sm:min-w-[400px] w-[calc(100vw-2rem)] sm:w-[720px] max-w-[calc(100vw-2rem)] origin-top transition-all duration-200 ease-out ${
                   categoriesOpen
                     ? 'opacity-100 scale-y-100 translate-y-0 pointer-events-auto'
                     : 'opacity-0 scale-y-0 -translate-y-2 pointer-events-none'
