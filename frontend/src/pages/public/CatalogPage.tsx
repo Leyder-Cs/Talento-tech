@@ -46,7 +46,7 @@ export function CatalogPage() {
     <div className="bg-gray-900 min-h-screen">
       {/* ─── Toolbar: sort + count ─── */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
-        <div className="flex items-start justify-between gap-4 mb-6">
+        <div className="flex flex-col sm:flex-row items-start justify-between gap-3 sm:gap-4 mb-6">
           {/* Left: filters */}
           <HorizontalFilters
             searchParams={searchParams}
@@ -55,7 +55,7 @@ export function CatalogPage() {
           />
 
           {/* Right: pill + count + sort */}
-          <div className="flex items-center gap-2 sm:gap-3 flex-shrink-0 ml-auto">
+          <div className="flex items-center gap-2 sm:gap-3 flex-shrink-0 sm:ml-auto">
             {currentCategory && (
               <span className="inline-flex items-center gap-1.5 px-2.5 py-1 text-sm text-gray-100 bg-gray-700 rounded-lg">
                 <span className="truncate max-w-28">{currentCategory}</span>

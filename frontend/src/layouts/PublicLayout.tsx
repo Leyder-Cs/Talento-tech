@@ -162,23 +162,23 @@ export function PublicLayout() {
                       Catálogo
                     </Link>
                     <button
-                        onClick={() => setCartOpen(true)}
-                        className={`relative p-2 transition-colors ${
-                          isHome && !scrolled
-                            ? 'text-white/80 hover:text-white'
-                            : 'text-gray-400 hover:text-emphasis'
-                        }`}
-                        aria-label="Abrir carrito"
-                      >
-                        <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 100 4 2 2 0 000-4z" />
-                        </svg>
-                        {totalItems > 0 && (
-                          <span className="absolute -top-0.5 -right-0.5 bg-accent text-white text-[10px] font-bold w-4 h-4 rounded-full flex items-center justify-center">
-                            {totalItems}
-                          </span>
-                        )}
-                      </button>
+                      onClick={() => setCartOpen(true)}
+                      className={`relative p-2 transition-colors ${
+                        isHome && !scrolled
+                          ? 'text-white/80 hover:text-white'
+                          : 'text-gray-400 hover:text-emphasis'
+                      }`}
+                      aria-label="Abrir carrito"
+                    >
+                      <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 100 4 2 2 0 000-4z" />
+                      </svg>
+                      {totalItems > 0 && (
+                        <span className="absolute -top-0.5 -right-0.5 bg-accent text-white text-[10px] font-bold w-4 h-4 rounded-full flex items-center justify-center">
+                          {totalItems}
+                        </span>
+                      )}
+                    </button>
                     {user?.role === 'ADMIN' && (
                       <Link
                         to="/admin/dashboard"
@@ -282,20 +282,20 @@ export function PublicLayout() {
                     </Link>
                   </>
                 )}
-
-                <button
-                  className={`md:hidden p-2 ${isHome && !scrolled ? 'text-white' : 'text-emphasis'}`}
-                  onClick={() => setMobileOpen(!mobileOpen)}
-                >
-                  <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    {mobileOpen ? (
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-                    ) : (
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-                    )}
-                  </svg>
-                </button>
               </div>
+              {/* ─── Botón hamburguesa FUERA del hidden md:flex ─── */}
+              <button
+                className={`md:hidden p-2 ml-auto ${isHome && !scrolled ? 'text-white' : 'text-emphasis'}`}
+                onClick={() => setMobileOpen(!mobileOpen)}
+              >
+                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  {mobileOpen ? (
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                  ) : (
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+                  )}
+                </svg>
+              </button>
             </div>
 
             {/* ─── Fila 2: categorías (solo catálogo) ─── */}
@@ -357,12 +357,6 @@ export function PublicLayout() {
               >
                 Catálogo
               </Link>
-              <button
-                onClick={() => { setCartOpen(true); setMobileOpen(false); }}
-                className="block w-full text-left text-sm font-medium px-3 py-1.5 rounded-lg transition-all duration-200 text-gray-400 hover:text-emphasis hover:ring-1 hover:ring-gray-600/50"
-              >
-                Carrito ({totalItems})
-              </button>
               {isAuthenticated ? (
                 <>
                   {user?.role === 'ADMIN' && (
@@ -378,6 +372,12 @@ export function PublicLayout() {
                       Panel Admin
                     </Link>
                   )}
+                  <button
+                    onClick={() => { setCartOpen(true); setMobileOpen(false); }}
+                    className="block w-full text-left text-sm font-medium px-3 py-1.5 rounded-lg transition-all duration-200 text-gray-400 hover:text-emphasis hover:ring-1 hover:ring-gray-600/50"
+                  >
+                    Carrito ({totalItems})
+                  </button>
                   <button
                     onClick={() => {
                       handleLogout();
