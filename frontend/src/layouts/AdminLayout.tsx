@@ -42,6 +42,7 @@ const navItems = [
 
 export function AdminLayout() {
   const { user, logout } = useAuthStore();
+  const [sidebarOpen, setSidebarOpen] = useState(false);
   const [isLight, setIsLight] = useState(() => user?.theme === 'light');
   useEffect(() => {
     document.documentElement.classList.toggle('light', isLight);
@@ -55,9 +56,43 @@ export function AdminLayout() {
     location.pathname === path ||
     (path !== '/admin/dashboard' && location.pathname.startsWith(path));
 
+  // Cerrar sidebar al navegar en mobile
+  useEffect(() => {
+    setSidebarOpen(false);
+  }, [location.pathname]);
+
   return (
     <div id="admin-root" className="min-h-screen bg-gray-900">
-      <aside className="fixed left-0 top-0 w-48 h-screen bg-gray-900 border-r border-gray-800/60 flex flex-col z-30">
+      {/* ─── Mobile header con hamburguesa ─── */}
+      <div className="lg:hidden fixed top-0 left-0 right-0 h-12 bg-gray-900 border-b border-gray-800/60 flex items-center px-4 z-40">
+        <button
+          onClick={() => setSidebarOpen(true)}
+          className="p-1.5 text-gray-400 hover:text-emphasis transition-colors"
+        >
+          <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+        <span className="ml-3 font-bold text-sm text-emphasis">Admin</span>
+      </div>
+
+      {/* ─── Backdrop (mobile) ─── */}
+      {sidebarOpen && (
+        <div
+          className="fixed inset-0 bg-black/60 z-30 lg:hidden"
+          onClick={() => setSidebarOpen(false)}
+        />
+      )}
+
+      {/* ─── Sidebar ─── */}
+      <aside
+        className={`
+          fixed left-0 top-0 w-48 h-screen bg-gray-900 border-r border-gray-800/60 flex flex-col z-30
+          transition-transform duration-300 ease-out
+          ${sidebarOpen ? 'translate-x-0' : '-translate-x-full'}
+          lg:translate-x-0
+        `}
+      >
         <div className="h-12 flex items-center gap-2 px-4 flex-shrink-0">
           <Link to="/" className="flex items-center gap-2 flex-1 min-w-0 group">
             <div className="w-7 h-7 bg-gradient-to-br from-accent to-teal-600 rounded-xl flex items-center justify-center flex-shrink-0">
@@ -65,7 +100,14 @@ export function AdminLayout() {
             </div>
             <span className="font-bold text-sm text-emphasis tracking-tight">L-Health</span>
           </Link>
-
+          <button
+            onClick={() => setSidebarOpen(false)}
+            className="lg:hidden p-1 text-gray-400 hover:text-emphasis"
+          >
+            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
         </div>
 
         <nav className="flex-1 p-2 space-y-0.5 overflow-y-auto">
@@ -121,8 +163,8 @@ export function AdminLayout() {
         </div>
       </aside>
 
-      <div className="ml-48 flex flex-col min-h-screen min-w-0">
-        <main className="flex-1 p-6 lg:p-8">
+      <div className="lg:ml-48 pt-12 lg:pt-0 flex flex-col min-h-screen min-w-0">
+        <main className="flex-1 p-4 sm:p-6 lg:p-8">
           <Outlet />
         </main>
       </div>

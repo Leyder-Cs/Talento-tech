@@ -235,8 +235,8 @@ export function ProductDetailPage() {
               </span>
             </div>
 
-            <div className="flex items-center gap-4 mb-6">
-              <div className="flex items-center border border-gray-700 rounded-lg bg-gray-800/50">
+            <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4 mb-6">
+              <div className="flex self-center sm:self-auto items-center border border-gray-700 rounded-lg bg-gray-800/50">
                 <button
                   onClick={() => setQuantity(Math.max(1, quantity - 1))}
                   className="px-3.5 py-2.5 text-gray-400 hover:text-gray-200 hover:bg-gray-700/50 transition-colors rounded-l-lg"
@@ -256,7 +256,7 @@ export function ProductDetailPage() {
               </div>
               <Button
                 size="lg"
-                className="flex-1"
+                className="w-full sm:flex-1"
                 onClick={addToCart}
                 disabled={product.stock === 0}
               >

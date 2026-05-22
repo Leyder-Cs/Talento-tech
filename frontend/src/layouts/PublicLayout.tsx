@@ -101,7 +101,7 @@ export function PublicLayout() {
   };
 
   return (
-    <div className="min-h-screen flex flex-col">
+    <div className="min-h-screen flex flex-col overflow-x-hidden">
       <header className={isCatalog
         ? 'sticky top-0 z-40 w-full transition-all duration-300 bg-gray-900 border-b border-gray-800'
         : `${isHome || isAuthPage ? 'fixed' : 'sticky'} top-0 z-40 w-full transition-all duration-300 ${

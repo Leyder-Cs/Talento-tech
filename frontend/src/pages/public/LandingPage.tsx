@@ -125,21 +125,21 @@ export function LandingPage() {
                 Hablar con un asesor
               </Button>
             </div>
-            <div className="flex flex-wrap gap-6 mt-12 text-sm text-white/60">
+            <div className="grid grid-cols-1 sm:flex sm:flex-wrap gap-3 sm:gap-6 mt-8 sm:mt-12 text-sm text-white/60">
               <span className="flex items-center gap-2">
-                <svg className="w-4 h-4 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg className="w-4 h-4 text-accent flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16V6a1 1 0 00-1-1H4a1 1 0 00-1 1v10a1 1 0 001 1h1m8-1a1 1 0 01-1 1H9m4-1V8a1 1 0 011-1h2.586a1 1 0 01.707.293l3.414 3.414a1 1 0 01.293.707V16a1 1 0 01-1 1h-1m-6-1a1 1 0 001 1h1M5 17a2 2 0 104 0m-4 0a2 2 0 114 0m6 0a2 2 0 104 0m-4 0a2 2 0 114 0" />
                 </svg>
                 Envío a toda Colombia
               </span>
               <span className="flex items-center gap-2">
-                <svg className="w-4 h-4 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg className="w-4 h-4 text-accent flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                 </svg>
                 Coordinación por WhatsApp
               </span>
               <span className="flex items-center gap-2">
-                <svg className="w-4 h-4 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg className="w-4 h-4 text-accent flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
                 </svg>
                 Devoluciones sin complicación
@@ -273,15 +273,15 @@ export function LandingPage() {
               </Link>
               <button
                 onClick={() => goTo('left')}
-                className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-10 z-20 text-gray-400 hover:text-emphasis transition"
+                className="absolute left-1 sm:left-0 top-1/2 -translate-y-1/2 z-20 text-gray-400 hover:text-emphasis transition"
               >
-                <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" /></svg>
+                <svg className="w-6 h-6 sm:w-8 sm:h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" /></svg>
               </button>
               <button
                 onClick={() => goTo('right')}
-                className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-10 z-20 text-gray-400 hover:text-emphasis transition"
+                className="absolute right-1 sm:right-0 top-1/2 -translate-y-1/2 z-20 text-gray-400 hover:text-emphasis transition"
               >
-                <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" /></svg>
+                <svg className="w-6 h-6 sm:w-8 sm:h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" /></svg>
               </button>
               <div className="overflow-hidden p-4">
                 <div
@@ -407,7 +407,7 @@ export function LandingPage() {
       {/* ────────────── CTA ────────────── */}
       <section className="py-8 lg:py-12" style={{ backgroundColor: 'rgb(var(--mas-vendidos-bg))' }}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="relative overflow-hidden rounded-2xl bg-accent p-12 lg:p-16 text-center shadow-xl">
+          <div className="relative overflow-hidden rounded-2xl bg-accent p-6 sm:p-12 lg:p-16 text-center shadow-xl">
             <div className="relative z-10">
               <p className="text-sm font-semibold uppercase tracking-widest mb-3 text-white/70">Contacto</p>
               <h2 className="text-4xl sm:text-5xl font-bold mb-4 tracking-tight text-white">
