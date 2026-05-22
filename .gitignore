@@ -1,0 +1,11 @@
+node_modules/
+dist/
+.env
+backend/public/
+*.log
+*.bak
+.atl/
+prisma/dev.db
+prisma/dev.db-journal
+backend/prisma/dev.db
+backend/prisma/dev.db-journal
