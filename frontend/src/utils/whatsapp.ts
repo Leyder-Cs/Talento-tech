@@ -1,7 +1,9 @@
 import type { CartItem, Product } from '../types';
 
+const DEFAULT_NUMBER = '573112840242';
+
 export function generateOrderMessage(items: CartItem[]): string {
-  const number = import.meta.env.VITE_WHATSAPP_NUMBER;
+  const number = import.meta.env.VITE_WHATSAPP_NUMBER || DEFAULT_NUMBER;
   const itemList = items
     .map(
       (item, i) =>
@@ -17,7 +19,7 @@ export function generateOrderMessage(items: CartItem[]): string {
 }
 
 export function generateProductMessage(product: Product): string {
-  const number = import.meta.env.VITE_WHATSAPP_NUMBER;
+  const number = import.meta.env.VITE_WHATSAPP_NUMBER || DEFAULT_NUMBER;
   const message = `Hola, estoy interesado en:\n\n${product.name}\nPrecio: $${product.price.toLocaleString('es-CO')}\n\n¿Podrías darme más información sobre disponibilidad y envío?`;
   return `https://wa.me/${number}?text=${encodeURIComponent(message)}`;
 }
