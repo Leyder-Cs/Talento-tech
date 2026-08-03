@@ -5,5 +5,8 @@
     "build": "cd frontend && npm install && VITE_API_URL=/api npm run build && rm -rf ../backend/public && mkdir -p ../backend/public && cp -r dist/* ../backend/public/ && cd ../backend && npm install && npx prisma generate && npm run build",
     "start": "cd backend && npx prisma migrate deploy && npx prisma db seed && node dist/src/main",
     "dev": "cd backend && npm run dev"
+  },
+  "dependencies": {
+    "docx": "^9.6.1"
   }
 }
