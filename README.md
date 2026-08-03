@@ -96,7 +96,7 @@ Admin:
 | `ADMIN_EMAIL` | Email del administrador inicial | `admin@tudominio.com` |
 | `ADMIN_PASSWORD` | Contraseña del admin inicial | `Admin123!` |
 | `ADMIN_NAME` | Nombre del administrador inicial | `Administrador` |
-| `WHATSAPP_NUMBER` | Número WhatsApp con código de país | `573001234567` |
+| `WHATSAPP_NUMBER` | Número WhatsApp con código de país | `573208228748` |
 | `FRONTEND_URL` | URL del frontend para CORS | `http://localhost:5173` |
 
 ### Frontend
@@ -104,7 +104,7 @@ Admin:
 | Variable | Descripción | Ejemplo |
 |----------|-------------|---------|
 | `VITE_API_URL` | URL base del backend | `http://localhost:3000` |
-| `VITE_WHATSAPP_NUMBER` | Número WhatsApp | `573001234567` |
+| `VITE_WHATSAPP_NUMBER` | Número WhatsApp | `573208228748` |
 
 ## Estructura del proyecto
 

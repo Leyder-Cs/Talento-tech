@@ -1,6 +1,6 @@
 import type { CartItem, Product } from '../types';
 
-const DEFAULT_NUMBER = '573112840242';
+export const DEFAULT_NUMBER = '573208228748';
 
 export function generateOrderMessage(items: CartItem[]): string {
   const number = import.meta.env.VITE_WHATSAPP_NUMBER || DEFAULT_NUMBER;

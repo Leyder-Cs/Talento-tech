@@ -468,7 +468,7 @@ export function PublicLayout() {
             <div>
               <h4 className="font-semibold text-white mb-4">Contacto</h4>
               <ul className="space-y-2 text-white/70 text-sm">
-                <li>📱 WhatsApp: +57 3132901638 </li>
+                <li>📱 WhatsApp: +57 3208228748 </li>
                 <li>✉️ Correo: leydersalazar.007@gmail.com</li>
                 <li>📍 Mocoa - Putumayo</li>
               </ul>

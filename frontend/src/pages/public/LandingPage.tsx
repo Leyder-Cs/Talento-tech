@@ -5,7 +5,7 @@ import { useCategories } from '../../hooks/useCategories';
 import { Button } from '../../components/ui/Button';
 import { LandingProductCard } from '../../components/landing/LandingProductCard';
 import { ProductCardSkeleton } from '../../components/ui/Skeleton';
-import { openWhatsApp } from '../../utils/whatsapp';
+import { openWhatsApp, DEFAULT_NUMBER } from '../../utils/whatsapp';
 
 const CATEGORY_ICONS: Record<string, string> = {
   Suplementos: '💊',
@@ -120,7 +120,7 @@ export function LandingPage() {
               <Button
                 size="lg"
                 className="!bg-transparent border-2 border-white/20 text-white hover:!bg-white/10"
-                onClick={() => openWhatsApp(`https://wa.me/${import.meta.env.VITE_WHATSAPP_NUMBER}`)}
+                  onClick={() => openWhatsApp(`https://wa.me/${import.meta.env.VITE_WHATSAPP_NUMBER || DEFAULT_NUMBER}`)}
               >
                 Hablar con un asesor
               </Button>
@@ -425,7 +425,7 @@ export function LandingPage() {
                 <Button
                   size="lg"
                   className="!bg-transparent border-2 border-white text-white hover:!bg-white/10"
-                  onClick={() => openWhatsApp(`https://wa.me/${import.meta.env.VITE_WHATSAPP_NUMBER}`)}
+                onClick={() => openWhatsApp(`https://wa.me/${import.meta.env.VITE_WHATSAPP_NUMBER || DEFAULT_NUMBER}`)}
                 >
                   Contactar por WhatsApp
                 </Button>
