@@ -46,7 +46,7 @@ export function LandingProductCard({ product, simplified = false }: LandingProdu
     openWhatsApp(generateProductMessage(product));
   };
 
-  const FALLBACK_SVG = "data:image/svg+xml," + encodeURIComponent('<svg xmlns="http://www.w3.org/2000/svg" width="400" height="400" viewBox="0 0 400 400"><rect width="400" height="400" fill="#f5f5f5"/><text x="200" y="195" text-anchor="middle" fill="#0D9488" font-family="Arial,sans-serif" font-size="48" font-weight="bold">L-Health</text><text x="200" y="230" text-anchor="middle" fill="#a3a3a3" font-family="Arial,sans-serif" font-size="14">Producto</text></svg>');
+  const FALLBACK_SVG = "data:image/svg+xml," + encodeURIComponent('<svg xmlns="http://www.w3.org/2000/svg" width="400" height="400" viewBox="0 0 400 400"><rect width="400" height="400" fill="#f5f5f5"/><text x="200" y="195" text-anchor="middle" fill="#0D9488" font-family="Arial,sans-serif" font-size="48" font-weight="bold">YARAK</text><text x="200" y="230" text-anchor="middle" fill="#a3a3a3" font-family="Arial,sans-serif" font-size="14">Producto</text></svg>');
 
   const imageUrl = primaryImage?.imageUrl || FALLBACK_SVG;
 

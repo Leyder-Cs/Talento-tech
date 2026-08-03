@@ -54,7 +54,7 @@ export class ChatbotService {
         case 'greeting':
           return {
             type: 'text',
-            text: '¡Hola! 👋 Soy el asistente virtual de L-Health. ¿En qué puedo ayudarte? Puedes preguntarme sobre productos, precios, stock, envíos, pagos o contacto.',
+            text: '¡Hola! 👋 Soy el asistente virtual de YARAK. ¿En qué puedo ayudarte? Puedes preguntarme sobre productos, precios, stock, envíos, pagos o contacto.',
           };
 
         case 'shipping':
@@ -107,7 +107,7 @@ export class ChatbotService {
     if (intents.greeting) {
       return {
         type: 'text',
-        text: '¡Hola! 👋 Soy el asistente virtual de L-Health. ¿En qué puedo ayudarte? Puedes preguntarme sobre productos, precios, stock, envíos, pagos o contacto.',
+        text: '¡Hola! 👋 Soy el asistente virtual de YARAK. ¿En qué puedo ayudarte? Puedes preguntarme sobre productos, precios, stock, envíos, pagos o contacto.',
       };
     }
 

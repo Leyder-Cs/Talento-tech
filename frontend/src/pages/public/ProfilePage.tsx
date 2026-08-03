@@ -547,7 +547,7 @@ export function ProfilePage() {
               <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
                 {favorites.map((fav) => {
                   const primaryImage = fav.product.images?.find((img) => img.isPrimary) || fav.product.images?.[0];
-                  const FALLBACK = "data:image/svg+xml," + encodeURIComponent('<svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 200 200"><rect width="200" height="200" fill="#1f2937"/><text x="100" y="105" text-anchor="middle" fill="#0D9488" font-family="Arial,sans-serif" font-size="24" font-weight="bold">L-Health</text></svg>');
+                  const FALLBACK = "data:image/svg+xml," + encodeURIComponent('<svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 200 200"><rect width="200" height="200" fill="#1f2937"/><text x="100" y="105" text-anchor="middle" fill="#0D9488" font-family="Arial,sans-serif" font-size="24" font-weight="bold">YARAK</text></svg>');
                   return (
                     <Link
                       key={fav.id}

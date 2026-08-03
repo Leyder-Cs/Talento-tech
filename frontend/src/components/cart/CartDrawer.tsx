@@ -12,7 +12,7 @@ import toast from 'react-hot-toast';
 const FALLBACK_IMG =
   "data:image/svg+xml," +
   encodeURIComponent(
-    '<svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 200 200"><rect width="200" height="200" fill="#1f2937"/><text x="100" y="105" text-anchor="middle" fill="#0D9488" font-family="Arial,sans-serif" font-size="32" font-weight="bold">L-Health</text></svg>',
+    '<svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 200 200"><rect width="200" height="200" fill="#1f2937"/><text x="100" y="105" text-anchor="middle" fill="#0D9488" font-family="Arial,sans-serif" font-size="32" font-weight="bold">YARAK</text></svg>',
   );
 
 interface CartDrawerProps {

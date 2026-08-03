@@ -21,7 +21,7 @@ export function Chatbot() {
   const [messages, setMessages] = useState<Message[]>([
     {
       type: 'bot',
-      text: '¡Hola! 👋 Soy el asistente virtual de L-Health. ¿En qué puedo ayudarte? Puedes preguntarme sobre productos, precios, stock, envíos o pagos.',
+      text: '¡Hola! 👋 Soy el asistente virtual de YARAK. ¿En qué puedo ayudarte? Puedes preguntarme sobre productos, precios, stock, envíos o pagos.',
     },
   ]);
   const [input, setInput] = useState('');
@@ -92,7 +92,7 @@ export function Chatbot() {
       {isOpen && (
         <div className="fixed bottom-24 right-6 z-50 w-80 sm:w-96 bg-gray-900 rounded-2xl shadow-2xl border border-gray-800 overflow-hidden animate-slideUp">
           <div className="bg-gray-800 p-4">
-            <h3 className="text-white font-semibold">Asistente L-Health</h3>
+            <h3 className="text-white font-semibold">Asistente YARAK</h3>
             <p className="text-gray-400 text-xs">¡Pregúntame lo que necesites!</p>
           </div>
 

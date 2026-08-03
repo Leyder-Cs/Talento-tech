@@ -45,7 +45,7 @@ export class ProductsController {
   async exportTxt(@Res() res: Response) {
     const content = await this.productsService.exportTxt();
     res.setHeader('Content-Type', 'text/plain; charset=utf-8');
-    res.setHeader('Content-Disposition', 'attachment; filename="productos-lhealth.txt"');
+    res.setHeader('Content-Disposition', 'attachment; filename="productos-yarak.txt"');
     res.send(content);
   }
 

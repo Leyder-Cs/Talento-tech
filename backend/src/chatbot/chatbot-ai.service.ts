@@ -94,7 +94,7 @@ export class ChatbotAiService {
   /* ── Gemini provider ── */
 
   private buildPrompt(text: string): string {
-    return `Eres un clasificador de intenciones para un e-commerce de productos naturales y salud (L-Health).
+    return `Eres un clasificador de intenciones para un e-commerce de productos naturales y salud (YARAK).
 
 Clasifica el mensaje del usuario en UNA de estas intenciones:
 - "search": el usuario busca productos específicos (ej: "moringa", "crema dental", "qué venden para la digestión"). Extrae 1-3 términos de búsqueda relevantes.

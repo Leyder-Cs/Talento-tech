@@ -96,9 +96,9 @@ export function AdminLayout() {
         <div className="h-12 flex items-center gap-2 px-4 flex-shrink-0">
           <Link to="/" className="flex items-center gap-2 flex-1 min-w-0 group">
             <div className="w-7 h-7 bg-gradient-to-br from-accent to-teal-600 rounded-xl flex items-center justify-center flex-shrink-0">
-              <span className="text-white font-bold text-[10px]">L</span>
+              <span className="text-white font-bold text-[10px]">Y</span>
             </div>
-            <span className="font-bold text-sm text-emphasis tracking-tight">L-Health</span>
+            <span className="font-bold text-sm text-emphasis tracking-tight">YARAK</span>
           </Link>
           <button
             onClick={() => setSidebarOpen(false)}

@@ -27,7 +27,7 @@ const reviewSchema = z.object({
 
 type ReviewForm = z.infer<typeof reviewSchema>;
 
-const FALLBACK_IMG = "data:image/svg+xml," + encodeURIComponent('<svg xmlns="http://www.w3.org/2000/svg" width="600" height="600" viewBox="0 0 600 600"><rect width="600" height="600" fill="#1f2937"/><text x="300" y="295" text-anchor="middle" fill="#0D9488" font-family="Arial,sans-serif" font-size="64" font-weight="bold">L-Health</text><text x="300" y="340" text-anchor="middle" fill="#6b7280" font-family="Arial,sans-serif" font-size="18">Producto</text></svg>');
+const FALLBACK_IMG = "data:image/svg+xml," + encodeURIComponent('<svg xmlns="http://www.w3.org/2000/svg" width="600" height="600" viewBox="0 0 600 600"><rect width="600" height="600" fill="#1f2937"/><text x="300" y="295" text-anchor="middle" fill="#0D9488" font-family="Arial,sans-serif" font-size="64" font-weight="bold">YARAK</text><text x="300" y="340" text-anchor="middle" fill="#6b7280" font-family="Arial,sans-serif" font-size="18">Producto</text></svg>');
 
 export function ProductDetailPage() {
   const { slug } = useParams<{ slug: string }>();

@@ -122,7 +122,7 @@ export function PublicLayout() {
                 <div className="w-8 h-8 bg-accent rounded-lg flex items-center justify-center">
                   <span className="text-white font-bold text-sm">L</span>
                 </div>
-                <span className={`font-bold text-xl ${isHome && !scrolled ? 'text-white' : 'text-emphasis'}`}>L-Health</span>
+                <span className={`font-bold text-xl ${isHome && !scrolled ? 'text-white' : 'text-emphasis'}`}>YARAK</span>
               </Link>
 
               {/* Search bar — visible solo en /catalog */}
@@ -436,7 +436,7 @@ export function PublicLayout() {
                 <div className="w-8 h-8 bg-white/20 rounded-lg flex items-center justify-center">
                   <span className="text-white font-bold text-sm">L</span>
                 </div>
-                <span className="font-bold text-xl">L-Health</span>
+                <span className="font-bold text-xl">YARAK</span>
               </div>
               <p className="text-white/70 text-sm leading-relaxed">
                 Tu tienda de productos para la salud y el bienestar.
@@ -475,7 +475,7 @@ export function PublicLayout() {
             </div>
           </div>
           <div className="border-t border-white/20 mt-8 pt-8 text-center text-white/50 text-sm">
-            <p>&copy; {new Date().getFullYear()} L-Health. Todos los derechos reservados.</p>
+            <p>&copy; {new Date().getFullYear()} YARAK. Todos los derechos reservados.</p>
           </div>
         </div>
       </footer>

@@ -107,7 +107,7 @@ export function LandingPage() {
               <span className="text-accent">adapta a ti</span>
             </h2>
             <p className="text-white/70 text-lg leading-relaxed mb-10">
-              En L-Health seleccionamos cuidadosamente cada producto para ofrecerte lo mejor
+              En YARAK seleccionamos cuidadosamente cada producto para ofrecerte lo mejor
               en suplementos, cuidado personal y bienestar. Trabajamos con marcas comprometidas
               con la calidad y la eficacia.
             </p>
@@ -361,7 +361,7 @@ export function LandingPage() {
               Comprometidos con tu bienestar
             </h2>
             <p className="text-gray-300 text-lg leading-relaxed">
-              En L-Health creemos que el cuidado personal es la base de una vida plena.
+              En YARAK creemos que el cuidado personal es la base de una vida plena.
               Por eso trabajamos incansablemente para ofrecerte productos de la más alta
               calidad, seleccionados con rigor y respaldados por marcas de confianza.
             </p>

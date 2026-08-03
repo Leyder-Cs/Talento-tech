@@ -58,7 +58,7 @@ export function ProductsPage() {
       const url = URL.createObjectURL(blob);
       const a = document.createElement('a');
       a.href = url;
-      a.download = 'productos-lhealth.txt';
+      a.download = 'productos-yarak.txt';
       document.body.appendChild(a);
       a.click();
       document.body.removeChild(a);
